@@ -1,0 +1,36 @@
+package problemStatement;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+import problemStatement6_2.ProductList;
+
+public class Demo2 {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+		ProductList pro = new ProductList();
+		pro.addProducts("P001", "Maruit 800");
+		pro.addProducts("P002", "Maruit Zen");
+		pro.addProducts("P003", "Maruit Dsire");
+		pro.addProducts("P004", "Maruit Alto");
+		
+		FileOutputStream file = new FileOutputStream("products.txt");
+		
+		ObjectOutputStream out = new ObjectOutputStream(file);
+		
+		out.writeObject(pro);
+		out.flush();
+		out.close();
+		
+		System.out.println("object is serialized...");
+		
+		ObjectInputStream in = new ObjectInputStream(new FileInputStream("products.txt"));
+		ProductList de_pro = (ProductList) in.readObject();
+		
+		System.out.println("object is deserialized");
+		de_pro.displayProducts();
+	}
+}

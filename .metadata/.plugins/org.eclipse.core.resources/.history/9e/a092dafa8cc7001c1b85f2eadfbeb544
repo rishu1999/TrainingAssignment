@@ -1,0 +1,10 @@
+package problemStatement8_1;
+
+public class Threadcounter {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

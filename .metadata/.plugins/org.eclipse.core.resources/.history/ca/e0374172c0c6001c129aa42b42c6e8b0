@@ -1,0 +1,10 @@
+package bookdemo;
+
+public class Book2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

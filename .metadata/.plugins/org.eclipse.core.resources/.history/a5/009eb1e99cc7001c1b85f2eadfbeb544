@@ -1,0 +1,16 @@
+package problemStatement;
+
+import java.io.Serializable;
+import java.util.HashMap;
+
+public class Demo1 implements Serializable {
+	private HashMap<String, String> products = new HashMap<String, String>();
+	
+	public void addProducts(String key, String value) {
+		products.put(key, value);
+	}
+	
+	public void displayProducts() {
+		System.out.println(products.toString());
+	}
+}

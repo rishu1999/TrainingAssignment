@@ -1,0 +1,10 @@
+package problemStatement8_2;
+
+public class AddSynchronization {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
